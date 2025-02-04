@@ -137,7 +137,7 @@ elif [ "$CHOICE" == "2" ]; then
   # Restore
   echo -e "\033[1;33m📥 Downloading restore script...\033[0m"
   cd /root/backup
-  wget -qO restore.js https://raw.githubusercontent.com/rizkiwibu/rizkihost/refs/heads/main/restore.js
+  wget -qO restore.js wget -qO restore.js https://raw.githubusercontent.com/rizkiwibu/rizkihost/refs/heads/main/restore.js
   chmod +x restore.js
 
   echo -e "\033[1;33m🚀 Starting the restore process...\033[0m"
