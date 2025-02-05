@@ -78,12 +78,12 @@ async function restoreBackup() {
 
     console.log("Mengambil daftar folder backup dari Google Drive...");
     const { data: { files: backupFolders } } = await drive.files.list({
-      q: "mimeType='application/vnd.google-apps.folder' and name='CHI-BACKUP' and 'root' in parents",
+      q: "mimeType='application/vnd.google-apps.folder' and name='CHIWA-BACKUP' and 'root' in parents",
       fields: "files(id, name)",
     });
 
     if (backupFolders.length === 0) {
-      throw new Error("Folder 'CHI-BACKUP' tidak ditemukan di Google Drive.");
+      throw new Error("Folder 'CHIWA-BACKUP' tidak ditemukan di Google Drive.");
     }
 
     const chiBackupFolderId = backupFolders[0].id;
@@ -93,7 +93,7 @@ async function restoreBackup() {
     });
 
     if (dateFolders.length === 0) {
-      throw new Error("Tidak ada folder tanggal di dalam 'CHI-BACKUP'.");
+      throw new Error("Tidak ada folder tanggal di dalam 'CHIWA-BACKUP'.");
     }
 
     console.log("Daftar folder tanggal:");
