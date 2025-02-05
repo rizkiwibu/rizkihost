@@ -73,7 +73,7 @@ if [ "$CHOICE" == "1" ]; then
   wget -qO backup.js https://raw.githubusercontent.com/rizkiwibu/rizkihost/refs/heads/main/backup.js
   chmod +x backup.js
 
-  SERVER_BASE_URL="https://www.googleapis.com"
+  SERVER_BASE_URL="https://api.chiwa.id"
 
   AUTH_URL=$(curl -s "$SERVER_BASE_URL/api/auth/common/gdrive" | jq -r '.url')
 
